@@ -1,38 +1,42 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SideBar {
+  position: absolute;
+  margin: 20px;
+  padding: 0 30px;
+  background: rgba(255, 255, 255, 0.399);
+  box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 95%;
+  z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Map {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Marker {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 0 0 8pt rgb(255, 59, 48, 0.2);
+  background-color: rgb(255, 59, 48);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Statistics {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 5%;
+  margin-top: 1em;
+  row-gap: 1em;
 }
