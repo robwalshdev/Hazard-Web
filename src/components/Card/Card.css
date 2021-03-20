@@ -1,0 +1,55 @@
+.Card {
+    position: absolute;
+    margin: 20px;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 10%;
+    width: 25%;
+    bottom: 1%;
+    right: 0;
+    display: flex;
+}
+
+.Vote {
+    width: 300px;
+    height: 5px;
+    background-color: rgb(255, 59, 48);
+    position: absolute;
+    bottom: 30%;
+}
+
+.Vote .Up {
+    width: 200px;
+    height: 5px;
+    background-color: rgb(52, 199, 89);
+}
+
+.Icon {
+    background-color: rgb(4, 99, 201);
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    position: relative;
+    margin: auto 0;
+}
+
+.Icon svg {
+    width: 48px;
+    height: 28px;
+    position: absolute;
+    bottom: 18px;
+    left: 8px;
+}
+
+.Icon svg path {
+    fill: white;
+}
+
+.Details {
+    padding: 0 20px;
+}
