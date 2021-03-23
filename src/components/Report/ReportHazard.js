@@ -13,10 +13,7 @@ const ReportHazard = () => {
                 <input type="text" placeholder="Type"></input>
             </p>
             <p>
-                <input type="text" placeholder="Latitude"></input>
-            </p>
-            <p>
-                <input type="text" placeholder="Longitude"></input>
+                <input type="text" placeholder="Location"></input>
             </p>
             <button onClick={((e) => {
                 e.preventDefault();
