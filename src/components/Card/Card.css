@@ -8,7 +8,7 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    height: 10%;
+    min-height: 14%;
     width: 25%;
     bottom: 1%;
     right: 0;
@@ -16,23 +16,53 @@
 }
 
 .Vote {
-    width: 70%;
+    width: 90%;
     height: 5px;
     background-color: rgb(255, 59, 48);
     position: absolute;
-    bottom: 30%;
+    top: 5%;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.Description {
+    margin-bottom: 40px;
+}
+
+.Details h2 {
+    margin-bottom: 10px;
+}
+
+.Badge {
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    color: #fff;
+    background: #d35400;
+    font-weight: 500;
+    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+}
+
+.Red {
+    background: #e74c3c;
+}
+
+.Green {
+    background: #2ecc71;
 }
 
 .Vote .Up {
     width: 200px;
     height: 5px;
     background-color: rgb(52, 199, 89);
+    border-radius: 20px;
 }
 
 .Icon {
     background-color: rgb(4, 99, 201);
-    width: 64px;
-    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
     border-radius: 18px;
     position: relative;
     margin: auto 0;
@@ -51,5 +81,23 @@
 }
 
 .Details {
-    padding: 0 20px;
+    padding: 10px 20px;
+}
+
+.Delete {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.Delete button {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #e74c3c;
+    font-weight: 900;
+    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
 }

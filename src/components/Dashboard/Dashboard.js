@@ -17,7 +17,7 @@ const Dashboard = ({ token }) => {
     }, [queryTime]);
 
     const getHazards = async () => {
-        const response = await fetch("http://road-hazard-alert-system.eu-west-1.elasticbeanstalk.com/hazard/24?latitude=53.29969&longitude=-8.74752&radius=50", {
+        const response = await fetch(`http://road-hazard.eu-west-1.elasticbeanstalk.com/${queryTime}?latitude=53.29969&longitude=-8.74752&radius=500`, {
           "headers": {
             "Authorization": `Bearer ${token}`
           },
