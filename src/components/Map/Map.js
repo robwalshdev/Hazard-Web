@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./Map.css";
 import Card from "../Card/Card";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
@@ -13,6 +13,21 @@ const Map = ({ hazards }) => {
     });
 
     const [selectedHazard, setSelectedHazard] = useState();
+
+    useEffect(() => {
+        const listener = (e) => {
+            if (e.key === "Escape") {
+                setSelectedHazard(null);
+            }
+        };
+
+        window.addEventListener("keydown", listener);
+
+        // Cleanup
+        return () => {
+            window.removeEventListener("keydown", listener);
+        }
+    }, [])
 
     return (
         <div className="Map">
@@ -33,8 +48,8 @@ const Map = ({ hazards }) => {
                             e.preventDefault();
                             setSelectedHazard(hazard);
                         }} style={selectedHazard === hazard ? {
-                            'background-color': 'rgba(52, 152, 219, 1.0)',
-                            'box-shadow': '0 0 0 8pt rgb(52, 152, 219, 0.2)'
+                            'background-color': 'rgba(46, 204, 113, 1.0)',
+                            'box-shadow': '0 0 0 8pt rgba(46, 204, 113, 0.2)'
                         } : null}></button>
                     </Marker>
                 )) : null}

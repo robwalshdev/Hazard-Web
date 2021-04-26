@@ -18,6 +18,9 @@ const App = () => {
           <Route path="/dashboard">
             <Dashboard token={token} />
           </Route>
+          <Route path="/">
+            <h1>Road Hazard Alert System</h1>
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
