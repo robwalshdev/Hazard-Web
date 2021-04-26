@@ -1,7 +1,8 @@
 import './App.css';
-import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Dashboard from "../src/components/Dashboard/Dashboard"
 import Login from "../src/components/Login/Login";
+import LandingPage from "../src/components/LandingPage/LandingPage"
 import useToken from './useToken';
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
             <Dashboard token={token} />
           </Route>
           <Route path="/">
-            <h1>Road Hazard Alert System</h1>
+            <LandingPage></LandingPage>
           </Route>
         </Switch>
       </BrowserRouter>
