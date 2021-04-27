@@ -33,10 +33,16 @@
     border: none;
     width: 20px;
     height: 20px;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .TitleBar button svg path {
     fill: rgb(0, 0, 0, 0.4);
+}
+
+.TitleBar button:hover svg path {
+    fill: rgb(0, 0, 0, 0.8);
 }
 
 .TitleBar button svg {
@@ -52,6 +58,14 @@
 
 .TitleBar a svg path {
     fill: rgb(0, 0, 0, 0.4);
+}
+
+.TitleBar a:hover svg path {
+    fill: rgb(0, 0, 0, 0.8);
+}
+
+.SideBar hr {
+    border-top: 1px rgb(0, 0, 0, 0.4);
 }
 
 .Filter {

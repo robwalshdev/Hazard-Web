@@ -1,6 +1,7 @@
 import { React } from "react";
 import "./Dashboard.css";
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom"
 import StatisticCard from "../StatisticCard/StatisticCard";
 import Map from "../Map/Map";
 
@@ -26,8 +27,10 @@ const Dashboard = ({ token }) => {
     setHazards(data)
   }
 
+  const history = useHistory();
+
   return (
-    <div>
+    <div className="Dashboard">
       <div className="SideBar">
         <div className="TitleBar">
           <a href="/">
@@ -36,16 +39,22 @@ const Dashboard = ({ token }) => {
             </svg>
           </a>
 
-          <a href="/" className="Logo">
+          <a href="/dashboard" className="Logo">
             Dashboard
           </a>
 
-          <button>
+          <button onClick={(e) => {
+            e.preventDefault();
+            localStorage.removeItem('token');
+            history.push('/')
+          }}>
             <svg width="70" height="76" viewBox="0 0 70 76" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.2871 21.0646C19.2871 14.2286 21.0938 7.73447 24.2676 2.07037C25 0.75207 23.9746 -0.517529 22.4121 0.214871C9.22856 6.61137 0 20.2345 0 35.713C0 57.2462 17.92 75.1173 39.4043 75.1173C51.2207 75.1173 61.9629 69.6973 69.1895 61.2501C70.0684 60.2735 69.7266 58.8575 67.9688 59.297C64.9414 60.0782 61.8653 60.4689 58.6914 60.4689C37.1582 60.4689 19.2871 42.5978 19.2871 21.0646Z" fill="black" />
             </svg>
           </button>
         </div>
+
+        <hr />
 
         <h5>Filter by time</h5>
         <div className="Filter">

@@ -8,16 +8,14 @@ import useToken from './useToken';
 const App = () => {
   const { token, setToken } = useToken();
 
-  if (!token) {
-    return <Login setToken={setToken} />
-  }
-
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <Route path="/dashboard">
-            <Dashboard token={token} />
+            {token ? (
+              <Dashboard token={token} />
+            ) : <Login setToken={setToken} />}
           </Route>
           <Route path="/">
             <LandingPage></LandingPage>
