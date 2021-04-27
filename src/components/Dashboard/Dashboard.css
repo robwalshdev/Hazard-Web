@@ -5,15 +5,19 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     height: 100vh;
     z-index: 100;
-    overflow-y: auto;
+    overflow-y: scroll;
     min-width: 350px;
-    max-width: 20%;
+    max-width: 25%;
     height: 100vh;
     right: 0;
 }
 
 .SideBar a:hover {
     color: #3376f2;
+}
+
+.SideBar::-webkit-scrollbar {
+    display: none;
 }
 
 .SideBar h5 {
@@ -143,4 +147,5 @@
     display: grid;
     margin-top: 1em;
     row-gap: 1em;
+    padding-bottom: 20vh;
 }
