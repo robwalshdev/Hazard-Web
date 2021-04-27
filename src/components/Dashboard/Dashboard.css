@@ -1,57 +1,101 @@
 .SideBar {
     position: absolute;
-    margin: 20px;
-    padding: 0 30px;
-    background: rgba(255, 255, 255, 0.399);
-    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    height: 95%;
+    height: 100vh;
     z-index: 100;
     overflow-y: auto;
+    min-width: 350px;
+    max-width: 20%;
+    height: 100vh;
+    right: 0;
+}
+
+.SideBar a:hover {
+    color: #3376f2;
+}
+
+.SideBar h5 {
+    color: #95a5a6;
+}
+
+.TitleBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.TitleBar button {
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+.TitleBar button svg path {
+    fill: rgb(0, 0, 0, 0.4);
+}
+
+.TitleBar button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.TitleBar a svg {
+    width: 25px;
+    height: 25px;
+    padding-top: 5px;
+}
+
+.TitleBar a svg path {
+    fill: rgb(0, 0, 0, 0.4);
 }
 
 .Filter {
-    position: absolute;
-    height: 40px;
-    width: 240px;
-    right: 0;
-    margin: 20px;
-    padding: 0 30px;
-    background: rgba(255, 255, 255, 0.399);
-    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    z-index: 100;
-    display: inline;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5%;
 }
 
 .TimeButtonSelected {
-    width: 70px;
-    height: 30px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    background: #3376f2;
-    font-weight: 900;
     box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+    padding: 8px 20px;
+    font-size: 20px;
+    background: #3376f2;
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.TimeButtonSelected:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
 }
 
 .TimeButton {
-    width: 70px;
-    height: 30px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    color: #3376f2;
-    background: #fff;
-    font-weight: 900;
     box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+    padding: 8px 20px;
+    font-size: 20px;
+    background: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.TimeButton:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
 }
 
 .Map {
@@ -83,8 +127,6 @@
 
 .Statistics {
     display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 5%;
     margin-top: 1em;
     row-gap: 1em;
 }

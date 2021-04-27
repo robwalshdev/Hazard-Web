@@ -2,17 +2,23 @@
     position: absolute;
     margin: 20px;
     padding: 10px 30px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
     box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    min-height: 14%;
-    width: 25%;
+    width: 35%;
+    max-height: 200px;
+    overflow-y: hidden;
     bottom: 1%;
-    right: 0;
-    display: flex;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto 80px;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+    max-height: 400px;
 }
 
 .Vote {
@@ -35,11 +41,11 @@
 
 .Badge {
     margin-right: 20px;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 5px 25px;
+    border-radius: 15px;
     width: fit-content;
     color: #fff;
-    background: #d35400;
+    background: #3376f2;
     font-weight: 500;
     box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
 }
@@ -59,11 +65,16 @@
     border-radius: 20px;
 }
 
+.RightColumn {
+    display: grid;
+    grid-template-rows: 45% 55%;
+}
+
 .Icon {
     background-color: rgb(4, 99, 201);
-    min-width: 64px;
-    min-height: 64px;
-    border-radius: 18px;
+    width: 64px;
+    height: 64px;
+    border-radius: 15px;
     position: relative;
     margin: auto 0;
 }
@@ -82,22 +93,4 @@
 
 .Details {
     padding: 10px 20px;
-}
-
-.Delete {
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.Delete button {
-    width: 70px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    background: #e74c3c;
-    font-weight: 900;
-    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
 }

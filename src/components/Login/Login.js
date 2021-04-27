@@ -4,7 +4,7 @@ import './Login.css';
 import Map from "../Map/Map";
 
 async function loginUser(credentials) {
-    return fetch('http://road-hazard.eu-west-1.elasticbeanstalk.com/auth', {
+    return fetch('http://localhost:5000/auth', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
