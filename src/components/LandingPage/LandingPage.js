@@ -16,9 +16,9 @@ const LandingPage = () => {
 
             <div className="Hero">
                 <div className="HeroGroup">
-                    <h1>Road Hazad<br />alert app for iOS</h1>
+                    <h1>Road Hazard<br />alert app for iOS</h1>
                     <p>View road hazards reported by the community of users and reliable online sources. Quickly report a hazard at your current location.</p>
-                    <a href="https://github.com/robwalshdev/Hazard-iOS">GitHib</a>
+                    <a href="https://github.com/robwalshdev/Hazard-iOS">GitHub</a>
                 </div>
             </div>
         </div>
