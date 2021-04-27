@@ -9,9 +9,14 @@
     height: 20px;
     border: none;
     border-radius: 100%;
-    box-shadow: 0 0 0 8pt rgb(255, 59, 48, 0.2);
-    background-color: rgb(255, 59, 48);
+    box-shadow: 0 0 0 8pt rgba(255, 59, 48, 0.2);
+    background-color: rgba(255, 59, 48, 1);
     animation: scaleIn 4s infinite cubic-bezier(0.36, 0.11, 0.89, 0.32);
+}
+
+.ReportMarker {
+    box-shadow: 0 0 0 8pt rgba(46, 204, 113, 0.2);
+    background-color: rgba(46, 204, 113, 1);
 }
 
 @keyframes scaleIn {
@@ -23,4 +28,64 @@
         transform: scale(2, 2);
         opacity: 0;
     }
+}
+
+.ReportForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+    width: 20%;
+    display: inline-block;
+    align-items: center;
+}
+
+.ReportForm h3 {
+    color: #95a5a6;
+    margin: 15px 0 20px;
+}
+
+.HazardCentreContainer {
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    margin: 15px 0;
+    justify-items: center;
+}
+
+.HazardInput {
+    box-shadow: 0 4px 16px 0 rgba(148, 148, 148, 0.37);
+    padding: 8px 20px;
+    font-size: 18px;
+    color: #95a5a6;
+    background: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    width: 95%;
+}
+
+.ReportButton {
+    box-shadow: 0 8px 32px 0 rgba(148, 148, 148, 0.37);
+    padding: 8px 20px;
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 59, 48, 1);
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ReportButton:hover {
+    background-color: white;
+    color: rgba(255, 59, 48, 1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
 }

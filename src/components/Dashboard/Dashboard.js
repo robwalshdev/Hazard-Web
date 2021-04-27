@@ -92,7 +92,7 @@ const Dashboard = ({ token }) => {
 
 
 
-      <Map hazards={hazards} />
+      <Map hazards={hazards} token={token} getHazards={getHazards} />
     </div>
   );
 }
