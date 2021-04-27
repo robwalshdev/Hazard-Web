@@ -93,13 +93,14 @@ const Dashboard = ({ token }) => {
         <h5>Statistics</h5>
         <div className="Statistics">
           <StatisticCard statValue={hazards.length} statTitle="Total number of hazards"></StatisticCard>
-          <StatisticCard statValue={hazards.filter(hazard => hazard.hazardType === "Traffic").length} statTitle="Traffic related hazards"></StatisticCard>
-          <StatisticCard statValue={hazards.filter(hazard => hazard.hazardType !== "Traffic").length} statTitle="Other hazards"></StatisticCard>
-          <StatisticCard statValue={1} statTitle="Active users"></StatisticCard>
+          <StatisticCard statValue={hazards.filter(hazard => hazard.hazardType === "Traffic" || hazard.hazardType === "Incident").length} statTitle="Traffic related hazards"></StatisticCard>
+          <StatisticCard statValue={hazards.filter(hazard => hazard.hazardType === "Road works").length} statTitle="Road work projects"></StatisticCard>
+          <StatisticCard statValue={hazards.filter(hazard => hazard.hazardType === "Flooding").length} statTitle="Water related hazards"></StatisticCard>
+          <StatisticCard statValue={hazards.filter(hazard => hazard.hazardType !== "Traffic" && hazard.hazardType !== "Incident" && hazard.hazardType !== "Road works" && hazard.hazardType !== "Flooding").length} statTitle="Other hazards"></StatisticCard>
+          <StatisticCard statValue={hazards.filter(hazard => hazard.source === "AA").length} statTitle="AA reported hazards"></StatisticCard>
+          <StatisticCard statValue={hazards.filter(hazard => hazard.source !== "AA").length} statTitle="Community reported hazards"></StatisticCard>
         </div>
       </div>
-
-
 
       <Map hazards={hazards} token={token} getHazards={getHazards} />
     </div>
