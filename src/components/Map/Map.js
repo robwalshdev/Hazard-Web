@@ -48,8 +48,8 @@ const Map = ({ hazards }) => {
                             e.preventDefault();
                             setSelectedHazard(hazard);
                         }} style={selectedHazard === hazard ? {
-                            'background-color': 'rgba(46, 204, 113, 1.0)',
-                            'box-shadow': '0 0 0 8pt rgba(46, 204, 113, 0.2)'
+                            'background-color': 'rgba(51, 118, 242, 1.0)',
+                            'box-shadow': '0 0 0 8pt rgba(51, 118, 242, 0.2)'
                         } : null}></button>
                     </Marker>
                 )) : null}
