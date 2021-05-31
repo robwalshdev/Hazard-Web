@@ -7,7 +7,8 @@ async function loginUser(credentials) {
     return fetch('http://road-hazard.eu-west-1.elasticbeanstalk.com/auth', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            "Content-Security-Policy": "upgrade-insecure-requests"
         },
         body: JSON.stringify(credentials)
     })

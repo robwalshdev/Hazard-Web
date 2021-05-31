@@ -8,7 +8,8 @@ async function reportHazard(hazard, token) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${token}`,
+            "Content-Security-Policy": "upgrade-insecure-requests"
         },
         body: JSON.stringify(hazard)
     })

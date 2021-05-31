@@ -9,8 +9,8 @@ const Card = ({ hazard }) => {
             <div className="Details">
                 <h2>{hazard.hazardName}</h2>
                 <span className="Badge">{hazard.source}</span>
-                <span className="Badge Green">{hazard.hazardRating.up} 👍</span>
-                <span className="Badge Red">{hazard.hazardRating.down} 👎</span>
+                <span className="Badge Green">{hazard.hazardRating.up.length} 👍</span>
+                <span className="Badge Red">{hazard.hazardRating.down.length} 👎</span>
 
                 <p className="Description">{hazard.description}</p>
             </div>
