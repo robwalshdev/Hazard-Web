@@ -19,7 +19,7 @@ const Dashboard = ({ token }) => {
   const getHazards = async () => {
     const response = await fetch(`http://road-hazard.eu-west-1.elasticbeanstalk.com/hazard/${queryTime}?latitude=53.29969&longitude=-8.74752&radius=500`, {
       "headers": {
-        "Authorization": `Bearer ${token}`
+        "Authorization": `Bearer ${token}`,
       },
       "method": "GET",
     });

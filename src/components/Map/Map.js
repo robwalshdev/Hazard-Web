@@ -9,7 +9,6 @@ async function reportHazard(hazard, token) {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
-            "Content-Security-Policy": "upgrade-insecure-requests"
         },
         body: JSON.stringify(hazard)
     })
